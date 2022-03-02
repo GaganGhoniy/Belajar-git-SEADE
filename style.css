@@ -1,0 +1,21 @@
+.table   {
+    background-color: powderblue;
+}
+.h1  {
+    color: blue;
+}
+.p   {
+    color: red;
+}
+.table-css, .th-css, .td-css {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.table3, .th3, .td3 {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+.th3, .td3 {
+    background-color: #bdd6ca;
+}
