@@ -7,11 +7,20 @@
 
     <link rel="icon" type="image/x-icon" href="avatar-icon-png-25.jpg">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Table 1 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <!--  -->
+
+    <!-- Table Tombol -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
+    <!--  -->
     <title>Frontend ADE - Hari ke-2</title>
 
 </head>
 <body>
+    <!-- Table 1 -->
     <table id="table_id" class="display">
         <thead>
             <tr>
@@ -30,6 +39,8 @@
             </tr>
         </tbody>
     </table>
+
+    <!-- Table 2 -->
     <table border="1" style="width:100%" class="table">
         <tr>
             <th colspan="2">
@@ -91,6 +102,7 @@
         </tr>
         <tr>
             <th colspan="2" align="center">
+                <!-- Table 3 -->
                 <table border="1" style="margin: 10px; width: 50%;" class="table3">
                     <tr>
                         <th class="th3" rowspan="2">Kesukaan</th>
@@ -114,7 +126,29 @@
             </th>
         </tr>
     </table>
+
+    <!-- Table Tombol -->
+    <table id="example" class="display nowrap" style="width:100%">
+        <thead>
+            <tr>
+                <th>Barang</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Meja</th>
+                <th>Sintetis</th>
+            </tr>
+            <tr>
+                <th>Kursi</th>
+                <th>Non Sintetis</th>
+            </tr>
+        </tbody>
+    </table>
 </body>
+
+<!-- Table 1 -->
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
 <script>
@@ -122,4 +156,24 @@
     $('#table_id').DataTable();
 } );
 </script>
+<!--  -->
+
+<!-- Table Tombol -->
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+} );
+</script>
+<!--  -->
 </html>
